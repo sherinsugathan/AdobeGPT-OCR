@@ -1,5 +1,7 @@
 # OCR Optimization for Scanned Texts
 
+![](https://github.com/sherinsugathan/AdobeGPT-OCR/blob/6bba2ef5376c042250e761a7a96bb1bc4673678c/testResults/snapshot.png)
+
 ## Problem Statement
 Performing OCR on scanned texts presents challenges, especially with complex layout / double column formats. Usage of Google Vision API (at the time of writing this) leads to the columns getting mixed up, creating jumbled results. Manually fixing these errors is impractical due to the volume of inputs.
 
