@@ -2,10 +2,10 @@
 
 ![](https://github.com/sherinsugathan/AdobeGPT-OCR/blob/6bba2ef5376c042250e761a7a96bb1bc4673678c/testResults/snapshot.png)
 
-## Problem Statement
-Performing OCR on scanned texts presents challenges, especially with complex layout / double column formats. Usage of Google Vision API (at the time of writing this) leads to the columns getting mixed up, creating jumbled results. Manually fixing these errors is impractical due to the volume of inputs.
+## Description
+Performing OCR on scanned texts presents challenges, especially with complex layout / double column formats. Usage of Google Vision API (at the time of writing this) sometimes leads to the columns getting mixed up, creating jumbled results. Manually fixing these errors is impractical especially when there is a large volume of inputs to process.
 ![](https://github.com/sherinsugathan/AdobeGPT-OCR/blob/2b31667f99ed68f62d78adbcd09905a7738065eb/sampleImages/ExampleDocumentLayout.png)
-## Proposed Solution
+## Workflow
 We propose a combination of Adobe OCR and GPT3 to address this issue. The workflow is as follows:
 
 1. **Batch Processing with Adobe:** _Use Adobe software or Adobe PDF Services API to process PDF files in batches._
