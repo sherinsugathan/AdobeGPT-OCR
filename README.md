@@ -43,6 +43,7 @@ _Note: Adobe will keep opening and processing files one by one. The same process
    i. Add files/folder to process and press **Start**.
 
 _Note: Adobe will keep opening and processing files one by one. The same process can be also done programmatically using the Adobe PDF Service API._
+
 3. **Batch Convert RTF to Plain Text:** This step batch converts RTF files to plain text using Microsoft Word Macros.
 
    ***I. Enabling Developer Options in Word***
@@ -58,10 +59,15 @@ _Note: Adobe will keep opening and processing files one by one. The same process
    ***II. Using Macros for Batch Conversion***
 
    a. Go to the **Developer** tab.
+
    b. Click on **Visual Basic** to open the VBA editor.
+
    c. In the VBA editor, right-click on **ThisWorkbook** in the Project Explorer.
+
    d. Choose **Insert** > **Module**. This creates a new module for your macro code.
+
    e. Copy and paste the following VBA code into the module:
+
 ```angular2html
 Sub ConvertRTFtoTXT()
 
