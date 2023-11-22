@@ -1,0 +1,36 @@
+Sub ConvertRTFtoTXT()
+
+    Dim sourceFolder As String, destFolder As String
+    Dim docFile As String
+    Dim doc As Document
+
+    ' Specify the source folder containing the RTF files
+    sourceFolder = "C:\Sherin\Workspace\2_Datasets\OCR_dataset\AnalysisForKnut\OCRcjeu_texts-main\data_derived\combined\OCRed\RTF\"
+
+    ' Specify the destination folder where you want to save the TXT files
+    destFolder = "C:\Sherin\Workspace\2_Datasets\OCR_dataset\AnalysisForKnut\OCRcjeu_texts-main\data_derived\combined\OCRed\RTF\TXT\"
+
+    ' Ensure the folder paths end with a backslash
+    If Right(sourceFolder, 1) <> "\" Then sourceFolder = sourceFolder & "\"
+    If Right(destFolder, 1) <> "\" Then destFolder = destFolder & "\"
+
+    ' files
+    docFile = Dir(sourceFolder & "*.rtf")
+
+    ' Loop through each RTF file in the source folder
+    Do While docFile <> ""
+
+        ' Open the RTF file
+        Set doc = Documents.Open(sourceFolder & docFile)
+
+        ' Save it as a plain text file in the destination folder
+        doc.SaveAs2 destFolder & Replace(docFile, ".rtf", ".txt"), wdFormatText, Encoding:=msoEncodingUTF8
+
+        ' Close the RTF file
+        doc.Close
+
+        ' Get the next RTF file from the source folder
+        docFile = Dir
+    Loop
+
+End Sub
