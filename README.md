@@ -128,6 +128,3 @@ There may be alternate solutions. Contributions to enhance the process or extend
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgements
-Special thanks to the UiO IT team enabling access to API keys from OpenAPI.
